@@ -7,7 +7,7 @@ Route.get('/', ({ response }) => {
   return response.redirect('/api')
 })
 
-Route.route('users', 'UserController.store').validator('User')
+Route.post('users', 'UserController.store').validator('User')
 
 Route.post('sessions', 'SessionController.store').validator(['Session'])
 
